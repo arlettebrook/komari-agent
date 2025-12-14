@@ -1,5 +1,26 @@
 # komari-agent
 
+```shell
+docker run -idt \
+  --name komari-agent \
+  --restart unless-stopped \
+  ghcr.io/komari-monitor/komari-agent:latest \
+  --endpoint www \
+  --token abc
+```
+
+```shell
+docker run -idt \
+  --name komari-agent \
+  --restart unless-stopped \
+  -e AGENT_TOKEN=abc \
+  -e AGENT_ENDPOINT=www \
+  ghcr.io/arlettebrook/komari-agent:latest
+```
+
+
+---
+
 支持使用环境变量 / JSON配置文件来传入 agent 参数
 
 详见 `cmd/flags/flags.go` 及 `cmd/root.go`
