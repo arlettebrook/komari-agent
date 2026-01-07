@@ -1,7 +1,7 @@
 # komari-agent
 
 ```shell
-docker run -idt \
+docker run -d \
   --name komari-agent \
   --restart unless-stopped \
   ghcr.io/komari-monitor/komari-agent:latest \
@@ -10,7 +10,7 @@ docker run -idt \
 ```
 
 ```shell
-docker run -idt \
+docker run -d \
   --name komari-agent \
   --restart unless-stopped \
   -e AGENT_TOKEN=abc \
